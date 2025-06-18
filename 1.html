@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Remote Work Readiness Survey</title>
+  <link rel="stylesheet" href="1.css" />
+</head>
+<body>
+  <div class="survey-container">
+    <h2>Remote Work Readiness Survey</h2>
+    <form id="surveyForm">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" required>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" required>
+
+      <label>Do you have a quiet workspace at home?</label>
+      <select id="workspace" required>
+        <option value="">Select</option>
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+
+      <label>Do you have a stable internet connection?</label>
+      <select id="internet" required>
+        <option value="">Select</option>
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+
+      <label>Which remote tools are you familiar with?</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" value="Zoom"> Zoom</label>
+        <label><input type="checkbox" value="Slack"> Slack</label>
+        <label><input type="checkbox" value="Google Meet"> Google Meet</label>
+        <label><input type="checkbox" value="Trello"> Trello</label>
+        <label><input type="checkbox" value="Other"> Other</label>
+      </div>
+
+      <label for="hours">How many hours/day can you work remotely?</label>
+      <input type="number" id="hours" min="1" max="12" required>
+
+      <label for="comments">Any concerns or suggestions?</label>
+      <textarea id="comments" rows="3"></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <div id="thankYouMessage" class="hidden">
+      <h3>Thank you for your response!</h3>
+    </div>
+  </div>
+
+  <script src="1.js"></script>
+</body>
+</html>
